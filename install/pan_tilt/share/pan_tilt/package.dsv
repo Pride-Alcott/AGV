@@ -1,0 +1,3 @@
+source;share/pan_tilt/hook/pythonpath.ps1
+source;share/pan_tilt/hook/pythonpath.dsv
+source;share/pan_tilt/hook/pythonpath.sh

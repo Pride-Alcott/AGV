@@ -1,0 +1,18 @@
+[2.614s] Invoking command in '/home/pride/AGV/src/build/pan_tilt': PYTHONPATH=/home/pride/AGV/src/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/src/build/pan_tilt/build --no-deps symlink_data --force
+[2.939s] running develop
+[3.122s] running egg_info
+[3.123s] writing pan_tilt.egg-info/PKG-INFO
+[3.123s] writing dependency_links to pan_tilt.egg-info/dependency_links.txt
+[3.124s] writing entry points to pan_tilt.egg-info/entry_points.txt
+[3.124s] writing requirements to pan_tilt.egg-info/requires.txt
+[3.125s] writing top-level names to pan_tilt.egg-info/top_level.txt
+[3.127s] reading manifest file 'pan_tilt.egg-info/SOURCES.txt'
+[3.128s] writing manifest file 'pan_tilt.egg-info/SOURCES.txt'
+[3.130s] running build_ext
+[3.130s] Creating /home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages/pan-tilt.egg-link (link to .)
+[3.131s] 
+[3.131s] Installed /home/pride/AGV/src/build/pan_tilt
+[3.131s] running symlink_data
+[3.132s] symbolically linking /home/pride/AGV/src/build/pan_tilt/resource/pan_tilt -> /home/pride/AGV/src/install/pan_tilt/share/ament_index/resource_index/packages
+[3.132s] symbolically linking /home/pride/AGV/src/build/pan_tilt/package.xml -> /home/pride/AGV/src/install/pan_tilt/share/pan_tilt
+[3.280s] Invoked command in '/home/pride/AGV/src/build/pan_tilt' returned '0': PYTHONPATH=/home/pride/AGV/src/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/src/build/pan_tilt/build --no-deps symlink_data --force

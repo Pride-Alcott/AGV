@@ -1,0 +1,3 @@
+source;share/ntrip_client/hook/pythonpath.ps1
+source;share/ntrip_client/hook/pythonpath.dsv
+source;share/ntrip_client/hook/pythonpath.sh

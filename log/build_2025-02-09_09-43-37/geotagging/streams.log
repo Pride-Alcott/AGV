@@ -1,0 +1,20 @@
+[1.517s] Invoking command in '/home/pride/AGV/src/geotagging': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/geotagging build --build-base /home/pride/AGV/build/geotagging/build install --record /home/pride/AGV/build/geotagging/install.log --single-version-externally-managed install_data
+[1.815s] running egg_info
+[1.817s] writing ../../build/geotagging/geotagging.egg-info/PKG-INFO
+[1.818s] writing dependency_links to ../../build/geotagging/geotagging.egg-info/dependency_links.txt
+[1.818s] writing entry points to ../../build/geotagging/geotagging.egg-info/entry_points.txt
+[1.819s] writing requirements to ../../build/geotagging/geotagging.egg-info/requires.txt
+[1.819s] writing top-level names to ../../build/geotagging/geotagging.egg-info/top_level.txt
+[1.822s] reading manifest file '../../build/geotagging/geotagging.egg-info/SOURCES.txt'
+[1.824s] writing manifest file '../../build/geotagging/geotagging.egg-info/SOURCES.txt'
+[1.824s] running build
+[1.824s] running build_py
+[1.825s] running install
+[1.825s] running install_lib
+[1.828s] running install_data
+[1.828s] running install_egg_info
+[1.832s] removing '/home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging-0.0.0-py3.10.egg-info' (and everything under it)
+[1.832s] Copying ../../build/geotagging/geotagging.egg-info to /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging-0.0.0-py3.10.egg-info
+[1.835s] running install_scripts
+[1.871s] writing list of installed files to '/home/pride/AGV/build/geotagging/install.log'
+[1.976s] Invoked command in '/home/pride/AGV/src/geotagging' returned '0': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/geotagging build --build-base /home/pride/AGV/build/geotagging/build install --record /home/pride/AGV/build/geotagging/install.log --single-version-externally-managed install_data

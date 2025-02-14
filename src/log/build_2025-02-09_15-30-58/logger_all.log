@@ -1,0 +1,416 @@
+[0.726s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.726s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f4913460370>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f49135dd060>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f49135dd060>>)
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.201s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.201s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/pride/AGV/src'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.201s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.202s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.243s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.244s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extensions ['ignore', 'ignore_ament_install']
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extension 'ignore'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extension 'ignore_ament_install'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extensions ['colcon_pkg']
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extension 'colcon_pkg'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extensions ['colcon_meta']
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extension 'colcon_meta'
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extensions ['ros']
+[1.245s] Level 1:colcon.colcon_core.package_identification:_identify(geotagging) by extension 'ros'
+[1.253s] DEBUG:colcon.colcon_core.package_identification:Package 'geotagging' with type 'ros.ament_python' and name 'geotagging'
+[1.253s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extensions ['ignore', 'ignore_ament_install']
+[1.253s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extension 'ignore'
+[1.253s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extension 'ignore_ament_install'
+[1.253s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extensions ['colcon_pkg']
+[1.253s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extension 'colcon_pkg'
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extensions ['colcon_meta']
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extension 'colcon_meta'
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extensions ['ros']
+[1.254s] Level 1:colcon.colcon_core.package_identification:_identify(image_capture) by extension 'ros'
+[1.255s] DEBUG:colcon.colcon_core.package_identification:Package 'image_capture' with type 'ros.ament_python' and name 'image_capture'
+[1.256s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.256s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.256s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['ignore', 'ignore_ament_install']
+[1.257s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ignore'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ignore_ament_install'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['colcon_pkg']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'colcon_pkg'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['colcon_meta']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'colcon_meta'
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['ros']
+[1.258s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ros'
+[1.260s] DEBUG:colcon.colcon_core.package_identification:Package 'lidar' with type 'ros.ament_python' and name 'lidar'
+[1.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.261s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.261s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extensions ['ignore', 'ignore_ament_install']
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extension 'ignore'
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extension 'ignore_ament_install'
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extensions ['colcon_pkg']
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extension 'colcon_pkg'
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extensions ['colcon_meta']
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extension 'colcon_meta'
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extensions ['ros']
+[1.262s] Level 1:colcon.colcon_core.package_identification:_identify(mission_manager) by extension 'ros'
+[1.263s] DEBUG:colcon.colcon_core.package_identification:Package 'mission_manager' with type 'ros.ament_python' and name 'mission_manager'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extensions ['ignore', 'ignore_ament_install']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extension 'ignore'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extension 'ignore_ament_install'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extensions ['colcon_pkg']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extension 'colcon_pkg'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extensions ['colcon_meta']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extension 'colcon_meta'
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extensions ['ros']
+[1.264s] Level 1:colcon.colcon_core.package_identification:_identify(ntrip_client) by extension 'ros'
+[1.265s] DEBUG:colcon.colcon_core.package_identification:Package 'ntrip_client' with type 'ros.ament_python' and name 'ntrip_client'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extensions ['ignore', 'ignore_ament_install']
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extension 'ignore'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extension 'ignore_ament_install'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extensions ['colcon_pkg']
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extension 'colcon_pkg'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extensions ['colcon_meta']
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extension 'colcon_meta'
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extensions ['ros']
+[1.266s] Level 1:colcon.colcon_core.package_identification:_identify(pan_tilt) by extension 'ros'
+[1.267s] DEBUG:colcon.colcon_core.package_identification:Package 'pan_tilt' with type 'ros.ament_python' and name 'pan_tilt'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extensions ['ignore', 'ignore_ament_install']
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extension 'ignore'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extension 'ignore_ament_install'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extensions ['colcon_pkg']
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extension 'colcon_pkg'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extensions ['colcon_meta']
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extension 'colcon_meta'
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extensions ['ros']
+[1.268s] Level 1:colcon.colcon_core.package_identification:_identify(solar_panel_detector) by extension 'ros'
+[1.269s] DEBUG:colcon.colcon_core.package_identification:Package 'solar_panel_detector' with type 'ros.ament_python' and name 'solar_panel_detector'
+[1.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.270s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.347s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.348s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.360s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/pride/AGV/src/install
+[1.360s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/pride/ros2_ws/install
+[1.364s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 272 installed packages in /opt/ros/humble
+[1.379s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_target' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_clean_cache' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_clean_first' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'cmake_force_configure' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'ament_cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'catkin_cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'geotagging' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.492s] DEBUG:colcon.colcon_core.verb:Building package 'geotagging' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/geotagging', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/geotagging', 'merge_install': False, 'path': '/home/pride/AGV/src/geotagging', 'symlink_install': False, 'test_result_base': None}
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_args' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_target' from command line to 'None'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_clean_cache' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_clean_first' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'cmake_force_configure' from command line to 'False'
+[1.492s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'ament_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'catkin_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'image_capture' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.493s] DEBUG:colcon.colcon_core.verb:Building package 'image_capture' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/image_capture', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/image_capture', 'merge_install': False, 'path': '/home/pride/AGV/src/image_capture', 'symlink_install': False, 'test_result_base': None}
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_cache' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_first' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_force_configure' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'ament_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.493s] DEBUG:colcon.colcon_core.verb:Building package 'lidar' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/lidar', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/lidar', 'merge_install': False, 'path': '/home/pride/AGV/src/lidar', 'symlink_install': False, 'test_result_base': None}
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_target' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_clean_cache' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_clean_first' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'cmake_force_configure' from command line to 'False'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'ament_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'catkin_cmake_args' from command line to 'None'
+[1.493s] Level 5:colcon.colcon_core.verb:set package 'mission_manager' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.493s] DEBUG:colcon.colcon_core.verb:Building package 'mission_manager' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/mission_manager', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/mission_manager', 'merge_install': False, 'path': '/home/pride/AGV/src/mission_manager', 'symlink_install': False, 'test_result_base': None}
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_target' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_clean_cache' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_clean_first' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'cmake_force_configure' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'ament_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'catkin_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'ntrip_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.494s] DEBUG:colcon.colcon_core.verb:Building package 'ntrip_client' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/ntrip_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/ntrip_client', 'merge_install': False, 'path': '/home/pride/AGV/src/ntrip_client', 'symlink_install': False, 'test_result_base': None}
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_target' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_clean_cache' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_clean_first' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'cmake_force_configure' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'ament_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'catkin_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'pan_tilt' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.494s] DEBUG:colcon.colcon_core.verb:Building package 'pan_tilt' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/pan_tilt', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/pan_tilt', 'merge_install': False, 'path': '/home/pride/AGV/src/pan_tilt', 'symlink_install': False, 'test_result_base': None}
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_target' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_clean_first' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'cmake_force_configure' from command line to 'False'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'ament_cmake_args' from command line to 'None'
+[1.494s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[1.495s] Level 5:colcon.colcon_core.verb:set package 'solar_panel_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.495s] DEBUG:colcon.colcon_core.verb:Building package 'solar_panel_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/pride/AGV/src/build/solar_panel_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/pride/AGV/src/install/solar_panel_detector', 'merge_install': False, 'path': '/home/pride/AGV/src/solar_panel_detector', 'symlink_install': False, 'test_result_base': None}
+[1.495s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.497s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.498s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/geotagging' with build type 'ament_python'
+[1.498s] Level 1:colcon.colcon_core.shell:create_environment_hook('geotagging', 'ament_prefix_path')
+[1.509s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/ament_prefix_path.ps1'
+[1.511s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/ament_prefix_path.dsv'
+[1.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/ament_prefix_path.sh'
+[1.514s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.514s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.523s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/image_capture' with build type 'ament_python'
+[1.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_capture', 'ament_prefix_path')
+[1.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/ament_prefix_path.ps1'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/ament_prefix_path.dsv'
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/ament_prefix_path.sh'
+[1.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.533s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/lidar' with build type 'ament_python'
+[1.533s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'ament_prefix_path')
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/lidar/share/lidar/hook/ament_prefix_path.ps1'
+[1.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/lidar/share/lidar/hook/ament_prefix_path.dsv'
+[1.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/lidar/share/lidar/hook/ament_prefix_path.sh'
+[1.536s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.536s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.541s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/mission_manager' with build type 'ament_python'
+[1.541s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_manager', 'ament_prefix_path')
+[1.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/ament_prefix_path.ps1'
+[1.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/ament_prefix_path.dsv'
+[1.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/ament_prefix_path.sh'
+[1.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.550s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/ntrip_client' with build type 'ament_python'
+[1.550s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip_client', 'ament_prefix_path')
+[1.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/ament_prefix_path.ps1'
+[1.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/ament_prefix_path.dsv'
+[1.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/ament_prefix_path.sh'
+[1.553s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.553s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.558s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/pan_tilt' with build type 'ament_python'
+[1.558s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt', 'ament_prefix_path')
+[1.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/ament_prefix_path.ps1'
+[1.559s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/ament_prefix_path.dsv'
+[1.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/ament_prefix_path.sh'
+[1.560s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.560s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.570s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/pride/AGV/src/solar_panel_detector' with build type 'ament_python'
+[1.571s] Level 1:colcon.colcon_core.shell:create_environment_hook('solar_panel_detector', 'ament_prefix_path')
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/ament_prefix_path.ps1'
+[1.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/ament_prefix_path.dsv'
+[1.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/ament_prefix_path.sh'
+[1.574s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.574s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.918s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/geotagging'
+[1.918s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.918s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.124s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/image_capture'
+[2.125s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.125s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.308s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/lidar'
+[2.308s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.308s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.492s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/mission_manager'
+[2.492s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.492s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.678s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/ntrip_client'
+[2.678s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.678s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.876s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/pan_tilt'
+[2.876s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.876s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.063s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/pride/AGV/src/solar_panel_detector'
+[3.063s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.063s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.922s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/ntrip_client': PYTHONPATH=/home/pride/AGV/src/build/ntrip_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ntrip_client build --build-base /home/pride/AGV/src/build/ntrip_client/build install --record /home/pride/AGV/src/build/ntrip_client/install.log --single-version-externally-managed install_data
+[3.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/geotagging': PYTHONPATH=/home/pride/AGV/src/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/geotagging build --build-base /home/pride/AGV/src/build/geotagging/build install --record /home/pride/AGV/src/build/geotagging/install.log --single-version-externally-managed install_data
+[3.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/solar_panel_detector': PYTHONPATH=/home/pride/AGV/src/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/solar_panel_detector build --build-base /home/pride/AGV/src/build/solar_panel_detector/build install --record /home/pride/AGV/src/build/solar_panel_detector/install.log --single-version-externally-managed install_data
+[3.970s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/pan_tilt': PYTHONPATH=/home/pride/AGV/src/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pan_tilt build --build-base /home/pride/AGV/src/build/pan_tilt/build install --record /home/pride/AGV/src/build/pan_tilt/install.log --single-version-externally-managed install_data
+[3.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/lidar': PYTHONPATH=/home/pride/AGV/src/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/lidar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/pride/AGV/src/build/lidar/build install --record /home/pride/AGV/src/build/lidar/install.log --single-version-externally-managed install_data
+[3.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/mission_manager': PYTHONPATH=/home/pride/AGV/src/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mission_manager build --build-base /home/pride/AGV/src/build/mission_manager/build install --record /home/pride/AGV/src/build/mission_manager/install.log --single-version-externally-managed install_data
+[3.987s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/pride/AGV/src/image_capture': PYTHONPATH=/home/pride/AGV/src/build/image_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_capture build --build-base /home/pride/AGV/src/build/image_capture/build install --record /home/pride/AGV/src/build/image_capture/install.log --single-version-externally-managed install_data
+[4.398s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/solar_panel_detector' returned '0': PYTHONPATH=/home/pride/AGV/src/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/solar_panel_detector build --build-base /home/pride/AGV/src/build/solar_panel_detector/build install --record /home/pride/AGV/src/build/solar_panel_detector/install.log --single-version-externally-managed install_data
+[4.417s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector' for CMake module files
+[4.418s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector' for CMake config files
+[4.423s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector/lib'
+[4.423s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector/bin'
+[4.423s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector/lib/pkgconfig/solar_panel_detector.pc'
+[4.423s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector/lib/python3.10/site-packages'
+[4.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('solar_panel_detector', 'pythonpath')
+[4.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/pythonpath.ps1'
+[4.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/pythonpath.dsv'
+[4.426s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/hook/pythonpath.sh'
+[4.426s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/solar_panel_detector/bin'
+[4.427s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(solar_panel_detector)
+[4.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/package.ps1'
+[4.428s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/package.dsv'
+[4.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/package.sh'
+[4.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/package.bash'
+[4.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/solar_panel_detector/share/solar_panel_detector/package.zsh'
+[4.432s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/solar_panel_detector/share/colcon-core/packages/solar_panel_detector)
+[4.437s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client' for CMake module files
+[4.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/ntrip_client' returned '0': PYTHONPATH=/home/pride/AGV/src/build/ntrip_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ntrip_client build --build-base /home/pride/AGV/src/build/ntrip_client/build install --record /home/pride/AGV/src/build/ntrip_client/install.log --single-version-externally-managed install_data
+[4.440s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client' for CMake config files
+[4.443s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client/lib'
+[4.443s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client/bin'
+[4.443s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client/lib/pkgconfig/ntrip_client.pc'
+[4.444s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages'
+[4.444s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip_client', 'pythonpath')
+[4.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/pythonpath.ps1'
+[4.445s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/pythonpath.dsv'
+[4.445s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/hook/pythonpath.sh'
+[4.446s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/ntrip_client/bin'
+[4.446s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ntrip_client)
+[4.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/package.ps1'
+[4.446s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/package.dsv'
+[4.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/package.sh'
+[4.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/package.bash'
+[4.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/ntrip_client/share/ntrip_client/package.zsh'
+[4.448s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/ntrip_client/share/colcon-core/packages/ntrip_client)
+[4.448s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging' for CMake module files
+[4.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/geotagging' returned '0': PYTHONPATH=/home/pride/AGV/src/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/geotagging build --build-base /home/pride/AGV/src/build/geotagging/build install --record /home/pride/AGV/src/build/geotagging/install.log --single-version-externally-managed install_data
+[4.450s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging' for CMake config files
+[4.454s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging/lib'
+[4.455s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging/bin'
+[4.455s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging/lib/pkgconfig/geotagging.pc'
+[4.455s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging/lib/python3.10/site-packages'
+[4.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('geotagging', 'pythonpath')
+[4.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/pythonpath.ps1'
+[4.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/pythonpath.dsv'
+[4.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/geotagging/share/geotagging/hook/pythonpath.sh'
+[4.456s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/geotagging/bin'
+[4.456s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(geotagging)
+[4.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/geotagging/share/geotagging/package.ps1'
+[4.457s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/geotagging/share/geotagging/package.dsv'
+[4.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/geotagging/share/geotagging/package.sh'
+[4.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/geotagging/share/geotagging/package.bash'
+[4.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/geotagging/share/geotagging/package.zsh'
+[4.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/geotagging/share/colcon-core/packages/geotagging)
+[4.459s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt' for CMake module files
+[4.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/pan_tilt' returned '0': PYTHONPATH=/home/pride/AGV/src/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pan_tilt build --build-base /home/pride/AGV/src/build/pan_tilt/build install --record /home/pride/AGV/src/build/pan_tilt/install.log --single-version-externally-managed install_data
+[4.461s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt' for CMake config files
+[4.464s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt/lib'
+[4.464s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt/bin'
+[4.464s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt/lib/pkgconfig/pan_tilt.pc'
+[4.464s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt/lib/python3.10/site-packages'
+[4.464s] Level 1:colcon.colcon_core.shell:create_environment_hook('pan_tilt', 'pythonpath')
+[4.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/pythonpath.ps1'
+[4.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/pythonpath.dsv'
+[4.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/hook/pythonpath.sh'
+[4.466s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/pan_tilt/bin'
+[4.466s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pan_tilt)
+[4.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/package.ps1'
+[4.466s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/package.dsv'
+[4.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/package.sh'
+[4.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/package.bash'
+[4.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/pan_tilt/share/pan_tilt/package.zsh'
+[4.468s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/pan_tilt/share/colcon-core/packages/pan_tilt)
+[4.468s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar' for CMake module files
+[4.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/lidar' returned '0': PYTHONPATH=/home/pride/AGV/src/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/lidar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/pride/AGV/src/build/lidar/build install --record /home/pride/AGV/src/build/lidar/install.log --single-version-externally-managed install_data
+[4.470s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar' for CMake config files
+[4.472s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar/lib'
+[4.473s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar/bin'
+[4.473s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar/lib/pkgconfig/lidar.pc'
+[4.473s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar/lib/python3.10/site-packages'
+[4.473s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'pythonpath')
+[4.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/lidar/share/lidar/hook/pythonpath.ps1'
+[4.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/lidar/share/lidar/hook/pythonpath.dsv'
+[4.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/lidar/share/lidar/hook/pythonpath.sh'
+[4.474s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/lidar/bin'
+[4.474s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar)
+[4.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/lidar/share/lidar/package.ps1'
+[4.475s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/lidar/share/lidar/package.dsv'
+[4.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/lidar/share/lidar/package.sh'
+[4.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/lidar/share/lidar/package.bash'
+[4.476s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/lidar/share/lidar/package.zsh'
+[4.476s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/lidar/share/colcon-core/packages/lidar)
+[4.478s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager' for CMake module files
+[4.479s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/mission_manager' returned '0': PYTHONPATH=/home/pride/AGV/src/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mission_manager build --build-base /home/pride/AGV/src/build/mission_manager/build install --record /home/pride/AGV/src/build/mission_manager/install.log --single-version-externally-managed install_data
+[4.480s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager' for CMake config files
+[4.482s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager/lib'
+[4.483s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager/bin'
+[4.483s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager/lib/pkgconfig/mission_manager.pc'
+[4.483s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages'
+[4.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('mission_manager', 'pythonpath')
+[4.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/pythonpath.ps1'
+[4.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/pythonpath.dsv'
+[4.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/mission_manager/share/mission_manager/hook/pythonpath.sh'
+[4.485s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/mission_manager/bin'
+[4.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mission_manager)
+[4.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/mission_manager/share/mission_manager/package.ps1'
+[4.486s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/mission_manager/share/mission_manager/package.dsv'
+[4.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/mission_manager/share/mission_manager/package.sh'
+[4.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/mission_manager/share/mission_manager/package.bash'
+[4.487s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/mission_manager/share/mission_manager/package.zsh'
+[4.487s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/mission_manager/share/colcon-core/packages/mission_manager)
+[4.488s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture' for CMake module files
+[4.489s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/pride/AGV/src/image_capture' returned '0': PYTHONPATH=/home/pride/AGV/src/build/image_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/image_capture build --build-base /home/pride/AGV/src/build/image_capture/build install --record /home/pride/AGV/src/build/image_capture/install.log --single-version-externally-managed install_data
+[4.490s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture' for CMake config files
+[4.493s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture/lib'
+[4.493s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture/bin'
+[4.493s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture/lib/pkgconfig/image_capture.pc'
+[4.493s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages'
+[4.493s] Level 1:colcon.colcon_core.shell:create_environment_hook('image_capture', 'pythonpath')
+[4.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/pythonpath.ps1'
+[4.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/pythonpath.dsv'
+[4.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/pride/AGV/src/install/image_capture/share/image_capture/hook/pythonpath.sh'
+[4.494s] Level 1:colcon.colcon_core.environment:checking '/home/pride/AGV/src/install/image_capture/bin'
+[4.495s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(image_capture)
+[4.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/image_capture/share/image_capture/package.ps1'
+[4.495s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/pride/AGV/src/install/image_capture/share/image_capture/package.dsv'
+[4.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/image_capture/share/image_capture/package.sh'
+[4.496s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/image_capture/share/image_capture/package.bash'
+[4.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/pride/AGV/src/install/image_capture/share/image_capture/package.zsh'
+[4.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/pride/AGV/src/install/image_capture/share/colcon-core/packages/image_capture)
+[4.497s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.498s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.498s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.498s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.546s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.547s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.547s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.547s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.558s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[4.558s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.558s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pride/AGV/src/install/local_setup.ps1'
+[4.559s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pride/AGV/src/install/_local_setup_util_ps1.py'
+[4.561s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pride/AGV/src/install/setup.ps1'
+[4.562s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pride/AGV/src/install/local_setup.sh'
+[4.563s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/pride/AGV/src/install/_local_setup_util_sh.py'
+[4.563s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pride/AGV/src/install/setup.sh'
+[4.564s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pride/AGV/src/install/local_setup.bash'
+[4.565s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pride/AGV/src/install/setup.bash'
+[4.566s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/pride/AGV/src/install/local_setup.zsh'
+[4.567s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/pride/AGV/src/install/setup.zsh'

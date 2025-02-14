@@ -1,0 +1,3 @@
+source;share/solar_panel_detector/hook/pythonpath.ps1
+source;share/solar_panel_detector/hook/pythonpath.dsv
+source;share/solar_panel_detector/hook/pythonpath.sh

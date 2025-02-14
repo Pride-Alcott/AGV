@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing ntrip_client.egg-info/PKG-INFO
+writing dependency_links to ntrip_client.egg-info/dependency_links.txt
+writing entry points to ntrip_client.egg-info/entry_points.txt
+writing requirements to ntrip_client.egg-info/requires.txt
+writing top-level names to ntrip_client.egg-info/top_level.txt
+reading manifest file 'ntrip_client.egg-info/SOURCES.txt'
+writing manifest file 'ntrip_client.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages/ntrip-client.egg-link (link to .)
+Installing ntrip script to /home/pride/AGV/src/install/ntrip_client/lib/ntrip_client
+
+Installed /home/pride/AGV/src/build/ntrip_client
+running symlink_data
+symbolically linking /home/pride/AGV/src/build/ntrip_client/resource/ntrip_client -> /home/pride/AGV/src/install/ntrip_client/share/ament_index/resource_index/packages
+symbolically linking /home/pride/AGV/src/build/ntrip_client/package.xml -> /home/pride/AGV/src/install/ntrip_client/share/ntrip_client

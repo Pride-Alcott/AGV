@@ -1,0 +1,3 @@
+source;share/mission_manager/hook/pythonpath.ps1
+source;share/mission_manager/hook/pythonpath.dsv
+source;share/mission_manager/hook/pythonpath.sh

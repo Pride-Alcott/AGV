@@ -1,0 +1,27 @@
+running develop
+Removing /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image-capture.egg-link (link to .)
+running egg_info
+writing ../build/image_capture/image_capture.egg-info/PKG-INFO
+writing dependency_links to ../build/image_capture/image_capture.egg-info/dependency_links.txt
+writing entry points to ../build/image_capture/image_capture.egg-info/entry_points.txt
+writing requirements to ../build/image_capture/image_capture.egg-info/requires.txt
+writing top-level names to ../build/image_capture/image_capture.egg-info/top_level.txt
+reading manifest file '../build/image_capture/image_capture.egg-info/SOURCES.txt'
+writing manifest file '../build/image_capture/image_capture.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture
+copying /home/pride/AGV/src/build/image_capture/build/lib/image_capture/capture.py -> /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture
+copying /home/pride/AGV/src/build/image_capture/build/lib/image_capture/__init__.py -> /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture
+byte-compiling /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture/capture.py to capture.cpython-310.pyc
+byte-compiling /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/image_capture -> /home/pride/AGV/src/install/image_capture/share/ament_index/resource_index/packages
+copying package.xml -> /home/pride/AGV/src/install/image_capture/share/image_capture
+running install_egg_info
+Copying ../build/image_capture/image_capture.egg-info to /home/pride/AGV/src/install/image_capture/lib/python3.10/site-packages/image_capture-0.0.0-py3.10.egg-info
+running install_scripts
+Installing capture script to /home/pride/AGV/src/install/image_capture/lib/image_capture
+writing list of installed files to '/home/pride/AGV/src/build/image_capture/install.log'

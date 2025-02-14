@@ -1,0 +1,3 @@
+source;share/image_capture/hook/pythonpath.ps1
+source;share/image_capture/hook/pythonpath.dsv
+source;share/image_capture/hook/pythonpath.sh

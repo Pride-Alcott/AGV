@@ -1,0 +1,24 @@
+running develop
+Removing /home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages/mission-manager.egg-link (link to .)
+running egg_info
+writing ../build/mission_manager/mission_manager.egg-info/PKG-INFO
+writing dependency_links to ../build/mission_manager/mission_manager.egg-info/dependency_links.txt
+writing entry points to ../build/mission_manager/mission_manager.egg-info/entry_points.txt
+writing requirements to ../build/mission_manager/mission_manager.egg-info/requires.txt
+writing top-level names to ../build/mission_manager/mission_manager.egg-info/top_level.txt
+reading manifest file '../build/mission_manager/mission_manager.egg-info/SOURCES.txt'
+writing manifest file '../build/mission_manager/mission_manager.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+creating /home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages/mission_manager
+copying /home/pride/AGV/src/build/mission_manager/build/lib/mission_manager/__init__.py -> /home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages/mission_manager
+byte-compiling /home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages/mission_manager/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/mission_manager -> /home/pride/AGV/src/install/mission_manager/share/ament_index/resource_index/packages
+copying package.xml -> /home/pride/AGV/src/install/mission_manager/share/mission_manager
+running install_egg_info
+Copying ../build/mission_manager/mission_manager.egg-info to /home/pride/AGV/src/install/mission_manager/lib/python3.10/site-packages/mission_manager-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/pride/AGV/src/build/mission_manager/install.log'
