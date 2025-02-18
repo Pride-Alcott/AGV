@@ -1,0 +1,16 @@
+[2.246s] Invoking command in '/home/pride/AGV/build/lidar': PYTHONPATH=/home/pride/AGV/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/lidar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/lidar/build --no-deps symlink_data
+[2.638s] running develop
+[2.842s] running egg_info
+[2.842s] writing lidar.egg-info/PKG-INFO
+[2.842s] writing dependency_links to lidar.egg-info/dependency_links.txt
+[2.842s] writing entry points to lidar.egg-info/entry_points.txt
+[2.842s] writing requirements to lidar.egg-info/requires.txt
+[2.843s] writing top-level names to lidar.egg-info/top_level.txt
+[2.850s] reading manifest file 'lidar.egg-info/SOURCES.txt'
+[2.850s] writing manifest file 'lidar.egg-info/SOURCES.txt'
+[2.853s] running build_ext
+[2.853s] Creating /home/pride/AGV/install/lidar/lib/python3.10/site-packages/lidar.egg-link (link to .)
+[2.855s] 
+[2.855s] Installed /home/pride/AGV/build/lidar
+[2.855s] running symlink_data
+[3.002s] Invoked command in '/home/pride/AGV/build/lidar' returned '0': PYTHONPATH=/home/pride/AGV/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/lidar/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/lidar/build --no-deps symlink_data

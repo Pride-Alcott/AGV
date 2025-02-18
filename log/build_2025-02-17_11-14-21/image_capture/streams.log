@@ -1,0 +1,17 @@
+[2.540s] Invoking command in '/home/pride/AGV/build/image_capture': PYTHONPATH=/home/pride/AGV/build/image_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/image_capture/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/image_capture/build --no-deps symlink_data
+[2.965s] running develop
+[3.207s] running egg_info
+[3.209s] writing image_capture.egg-info/PKG-INFO
+[3.214s] writing dependency_links to image_capture.egg-info/dependency_links.txt
+[3.214s] writing entry points to image_capture.egg-info/entry_points.txt
+[3.214s] writing requirements to image_capture.egg-info/requires.txt
+[3.214s] writing top-level names to image_capture.egg-info/top_level.txt
+[3.215s] reading manifest file 'image_capture.egg-info/SOURCES.txt'
+[3.217s] writing manifest file 'image_capture.egg-info/SOURCES.txt'
+[3.219s] running build_ext
+[3.227s] Creating /home/pride/AGV/install/image_capture/lib/python3.10/site-packages/image-capture.egg-link (link to .)
+[3.230s] Installing capture script to /home/pride/AGV/install/image_capture/lib/image_capture
+[3.230s] 
+[3.230s] Installed /home/pride/AGV/build/image_capture
+[3.230s] running symlink_data
+[3.405s] Invoked command in '/home/pride/AGV/build/image_capture' returned '0': PYTHONPATH=/home/pride/AGV/build/image_capture/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/image_capture/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/image_capture/build --no-deps symlink_data

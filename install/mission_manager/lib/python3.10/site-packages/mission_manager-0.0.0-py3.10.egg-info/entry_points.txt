@@ -1,3 +1,3 @@
 [console_scripts]
-
+mission_manager = mission_manager.mission_manager:main
 

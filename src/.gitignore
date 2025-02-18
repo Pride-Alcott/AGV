@@ -1,0 +1,7 @@
+# Ignore ROS build and development directories
+build/
+devel/
+
+# Python bytecode and caches
+*.pyc
+__pycache__/

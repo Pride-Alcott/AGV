@@ -1,0 +1,23 @@
+running egg_info
+writing ../build/ntrip_client/ntrip_client.egg-info/PKG-INFO
+writing dependency_links to ../build/ntrip_client/ntrip_client.egg-info/dependency_links.txt
+writing entry points to ../build/ntrip_client/ntrip_client.egg-info/entry_points.txt
+writing requirements to ../build/ntrip_client/ntrip_client.egg-info/requires.txt
+writing top-level names to ../build/ntrip_client/ntrip_client.egg-info/top_level.txt
+reading manifest file '../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+writing manifest file '../build/ntrip_client/ntrip_client.egg-info/SOURCES.txt'
+running build
+running build_py
+copying ntrip_client/__init__.py -> /home/pride/AGV/src/build/ntrip_client/build/lib/ntrip_client
+copying ntrip_client/ntrip.py -> /home/pride/AGV/src/build/ntrip_client/build/lib/ntrip_client
+running install
+running install_lib
+copying /home/pride/AGV/src/build/ntrip_client/build/lib/ntrip_client/ntrip.py -> /home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages/ntrip_client
+byte-compiling /home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages/ntrip_client/ntrip.py to ntrip.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages/ntrip_client-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/ntrip_client/ntrip_client.egg-info to /home/pride/AGV/src/install/ntrip_client/lib/python3.10/site-packages/ntrip_client-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ntrip script to /home/pride/AGV/src/install/ntrip_client/lib/ntrip_client
+writing list of installed files to '/home/pride/AGV/src/build/ntrip_client/install.log'

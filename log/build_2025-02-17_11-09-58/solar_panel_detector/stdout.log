@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing solar_panel_detector.egg-info/PKG-INFO
+writing dependency_links to solar_panel_detector.egg-info/dependency_links.txt
+writing entry points to solar_panel_detector.egg-info/entry_points.txt
+writing requirements to solar_panel_detector.egg-info/requires.txt
+writing top-level names to solar_panel_detector.egg-info/top_level.txt
+reading manifest file 'solar_panel_detector.egg-info/SOURCES.txt'
+writing manifest file 'solar_panel_detector.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar-panel-detector.egg-link (link to .)
+Installing detector script to /home/pride/AGV/install/solar_panel_detector/lib/solar_panel_detector
+
+Installed /home/pride/AGV/build/solar_panel_detector
+running symlink_data
+symbolically linking /home/pride/AGV/build/solar_panel_detector/resource/solar_panel_detector -> /home/pride/AGV/install/solar_panel_detector/share/ament_index/resource_index/packages
+symbolically linking /home/pride/AGV/build/solar_panel_detector/package.xml -> /home/pride/AGV/install/solar_panel_detector/share/solar_panel_detector

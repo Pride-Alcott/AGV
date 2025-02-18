@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing image_capture.egg-info/PKG-INFO
+writing dependency_links to image_capture.egg-info/dependency_links.txt
+writing entry points to image_capture.egg-info/entry_points.txt
+writing requirements to image_capture.egg-info/requires.txt
+writing top-level names to image_capture.egg-info/top_level.txt
+reading manifest file 'image_capture.egg-info/SOURCES.txt'
+writing manifest file 'image_capture.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pride/AGV/install/image_capture/lib/python3.10/site-packages/image-capture.egg-link (link to .)
+Installing capture script to /home/pride/AGV/install/image_capture/lib/image_capture
+
+Installed /home/pride/AGV/build/image_capture
+running symlink_data
+symbolically linking /home/pride/AGV/build/image_capture/resource/image_capture -> /home/pride/AGV/install/image_capture/share/ament_index/resource_index/packages
+symbolically linking /home/pride/AGV/build/image_capture/package.xml -> /home/pride/AGV/install/image_capture/share/image_capture

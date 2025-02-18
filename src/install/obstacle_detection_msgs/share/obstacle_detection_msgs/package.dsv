@@ -1,0 +1,6 @@
+source;share/obstacle_detection_msgs/hook/pythonpath.ps1
+source;share/obstacle_detection_msgs/hook/pythonpath.dsv
+source;share/obstacle_detection_msgs/hook/pythonpath.sh
+source;share/obstacle_detection_msgs/hook/ament_prefix_path.ps1
+source;share/obstacle_detection_msgs/hook/ament_prefix_path.dsv
+source;share/obstacle_detection_msgs/hook/ament_prefix_path.sh

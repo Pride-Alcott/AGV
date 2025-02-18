@@ -9,7 +9,6 @@
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
-  <depend>image_capture</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
@@ -20,3 +19,4 @@
     <build_type>ament_python</build_type>
   </export>
 </package>
+

@@ -1,0 +1,16 @@
+[2.253s] Invoking command in '/home/pride/AGV/build/pan_tilt': PYTHONPATH=/home/pride/AGV/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/pan_tilt/build --no-deps symlink_data
+[2.910s] running develop
+[2.916s] running egg_info
+[2.916s] writing pan_tilt.egg-info/PKG-INFO
+[2.916s] writing dependency_links to pan_tilt.egg-info/dependency_links.txt
+[2.916s] writing entry points to pan_tilt.egg-info/entry_points.txt
+[2.917s] writing requirements to pan_tilt.egg-info/requires.txt
+[2.918s] writing top-level names to pan_tilt.egg-info/top_level.txt
+[2.918s] reading manifest file 'pan_tilt.egg-info/SOURCES.txt'
+[2.923s] writing manifest file 'pan_tilt.egg-info/SOURCES.txt'
+[2.927s] running build_ext
+[2.927s] Creating /home/pride/AGV/install/pan_tilt/lib/python3.10/site-packages/pan-tilt.egg-link (link to .)
+[2.928s] 
+[2.928s] Installed /home/pride/AGV/build/pan_tilt
+[2.928s] running symlink_data
+[3.039s] Invoked command in '/home/pride/AGV/build/pan_tilt' returned '0': PYTHONPATH=/home/pride/AGV/build/pan_tilt/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/pan_tilt/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/pan_tilt/build --no-deps symlink_data

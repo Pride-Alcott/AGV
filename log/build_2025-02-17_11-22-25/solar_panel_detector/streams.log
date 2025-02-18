@@ -1,0 +1,17 @@
+[2.233s] Invoking command in '/home/pride/AGV/build/solar_panel_detector': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/solar_panel_detector/build --no-deps symlink_data
+[2.618s] running develop
+[2.905s] running egg_info
+[2.905s] writing solar_panel_detector.egg-info/PKG-INFO
+[2.905s] writing dependency_links to solar_panel_detector.egg-info/dependency_links.txt
+[2.905s] writing entry points to solar_panel_detector.egg-info/entry_points.txt
+[2.905s] writing requirements to solar_panel_detector.egg-info/requires.txt
+[2.905s] writing top-level names to solar_panel_detector.egg-info/top_level.txt
+[2.905s] reading manifest file 'solar_panel_detector.egg-info/SOURCES.txt'
+[2.905s] writing manifest file 'solar_panel_detector.egg-info/SOURCES.txt'
+[2.905s] running build_ext
+[2.905s] Creating /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar-panel-detector.egg-link (link to .)
+[2.905s] Installing detector script to /home/pride/AGV/install/solar_panel_detector/lib/solar_panel_detector
+[2.906s] 
+[2.906s] Installed /home/pride/AGV/build/solar_panel_detector
+[2.906s] running symlink_data
+[3.020s] Invoked command in '/home/pride/AGV/build/solar_panel_detector' returned '0': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/solar_panel_detector/build --no-deps symlink_data

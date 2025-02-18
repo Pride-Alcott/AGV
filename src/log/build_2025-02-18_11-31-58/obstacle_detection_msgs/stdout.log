@@ -1,0 +1,31 @@
+running egg_info
+creating ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info
+writing ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/PKG-INFO
+writing dependency_links to ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/dependency_links.txt
+writing entry points to ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/entry_points.txt
+writing requirements to ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/requires.txt
+writing top-level names to ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/top_level.txt
+writing manifest file '../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/SOURCES.txt'
+reading manifest file '../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/SOURCES.txt'
+writing manifest file '../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pride/AGV/src/build/obstacle_detection_msgs/build
+creating /home/pride/AGV/src/build/obstacle_detection_msgs/build/lib
+creating /home/pride/AGV/src/build/obstacle_detection_msgs/build/lib/obstacle_detection_msgs
+copying obstacle_detection_msgs/__init__.py -> /home/pride/AGV/src/build/obstacle_detection_msgs/build/lib/obstacle_detection_msgs
+running install
+running install_lib
+creating /home/pride/AGV/src/install/obstacle_detection_msgs/lib/python3.10/site-packages/obstacle_detection_msgs
+copying /home/pride/AGV/src/build/obstacle_detection_msgs/build/lib/obstacle_detection_msgs/__init__.py -> /home/pride/AGV/src/install/obstacle_detection_msgs/lib/python3.10/site-packages/obstacle_detection_msgs
+byte-compiling /home/pride/AGV/src/install/obstacle_detection_msgs/lib/python3.10/site-packages/obstacle_detection_msgs/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/pride/AGV/src/install/obstacle_detection_msgs/share/ament_index
+creating /home/pride/AGV/src/install/obstacle_detection_msgs/share/ament_index/resource_index
+creating /home/pride/AGV/src/install/obstacle_detection_msgs/share/ament_index/resource_index/packages
+copying resource/obstacle_detection_msgs -> /home/pride/AGV/src/install/obstacle_detection_msgs/share/ament_index/resource_index/packages
+copying package.xml -> /home/pride/AGV/src/install/obstacle_detection_msgs/share/obstacle_detection_msgs
+running install_egg_info
+Copying ../build/obstacle_detection_msgs/obstacle_detection_msgs.egg-info to /home/pride/AGV/src/install/obstacle_detection_msgs/lib/python3.10/site-packages/obstacle_detection_msgs-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/pride/AGV/src/build/obstacle_detection_msgs/install.log'

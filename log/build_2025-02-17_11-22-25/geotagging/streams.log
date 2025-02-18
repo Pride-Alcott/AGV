@@ -1,0 +1,17 @@
+[2.282s] Invoking command in '/home/pride/AGV/build/geotagging': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/geotagging/build --no-deps symlink_data
+[2.649s] running develop
+[2.897s] running egg_info
+[2.897s] writing geotagging.egg-info/PKG-INFO
+[2.898s] writing dependency_links to geotagging.egg-info/dependency_links.txt
+[2.898s] writing entry points to geotagging.egg-info/entry_points.txt
+[2.899s] writing requirements to geotagging.egg-info/requires.txt
+[2.899s] writing top-level names to geotagging.egg-info/top_level.txt
+[2.912s] reading manifest file 'geotagging.egg-info/SOURCES.txt'
+[2.913s] writing manifest file 'geotagging.egg-info/SOURCES.txt'
+[2.919s] running build_ext
+[2.920s] Creating /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging.egg-link (link to .)
+[2.921s] Installing geotag script to /home/pride/AGV/install/geotagging/lib/geotagging
+[2.921s] 
+[2.921s] Installed /home/pride/AGV/build/geotagging
+[2.921s] running symlink_data
+[3.065s] Invoked command in '/home/pride/AGV/build/geotagging' returned '0': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/geotagging/build --no-deps symlink_data

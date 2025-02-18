@@ -1,0 +1,31 @@
+[2.649s] Invoking command in '/home/pride/AGV/build/mission_manager': PYTHONPATH=/home/pride/AGV/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pride/AGV/build/mission_manager/build
+[3.379s] running develop
+[3.380s] Removing /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission-manager.egg-link (link to .)
+[3.429s] Invoked command in '/home/pride/AGV/build/mission_manager' returned '0': PYTHONPATH=/home/pride/AGV/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pride/AGV/build/mission_manager/build
+[3.433s] Invoking command in '/home/pride/AGV/src/mission_manager': PYTHONPATH=/home/pride/AGV/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_manager build --build-base /home/pride/AGV/build/mission_manager/build install --record /home/pride/AGV/build/mission_manager/install.log --single-version-externally-managed install_data --force
+[3.767s] running egg_info
+[3.768s] writing ../../build/mission_manager/mission_manager.egg-info/PKG-INFO
+[3.769s] writing dependency_links to ../../build/mission_manager/mission_manager.egg-info/dependency_links.txt
+[3.770s] writing entry points to ../../build/mission_manager/mission_manager.egg-info/entry_points.txt
+[3.771s] writing requirements to ../../build/mission_manager/mission_manager.egg-info/requires.txt
+[3.771s] writing top-level names to ../../build/mission_manager/mission_manager.egg-info/top_level.txt
+[3.774s] reading manifest file '../../build/mission_manager/mission_manager.egg-info/SOURCES.txt'
+[3.776s] writing manifest file '../../build/mission_manager/mission_manager.egg-info/SOURCES.txt'
+[3.777s] running build
+[3.777s] running build_py
+[3.778s] copying mission_manager/mission_manager.py -> /home/pride/AGV/build/mission_manager/build/lib/mission_manager
+[3.780s] running install
+[3.780s] running install_lib
+[3.782s] copying /home/pride/AGV/build/mission_manager/build/lib/mission_manager/mission_manager.py -> /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission_manager
+[3.782s] copying /home/pride/AGV/build/mission_manager/build/lib/mission_manager/__init__.py -> /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission_manager
+[3.792s] byte-compiling /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission_manager/mission_manager.py to mission_manager.cpython-310.pyc
+[3.792s] byte-compiling /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission_manager/__init__.py to __init__.cpython-310.pyc
+[3.793s] running install_data
+[3.793s] copying resource/mission_manager -> /home/pride/AGV/install/mission_manager/share/ament_index/resource_index/packages
+[3.793s] copying package.xml -> /home/pride/AGV/install/mission_manager/share/mission_manager
+[3.793s] running install_egg_info
+[3.794s] Copying ../../build/mission_manager/mission_manager.egg-info to /home/pride/AGV/install/mission_manager/lib/python3.10/site-packages/mission_manager-0.0.0-py3.10.egg-info
+[3.800s] running install_scripts
+[3.846s] Installing mission_manager script to /home/pride/AGV/install/mission_manager/lib/mission_manager
+[3.849s] writing list of installed files to '/home/pride/AGV/build/mission_manager/install.log'
+[4.000s] Invoked command in '/home/pride/AGV/src/mission_manager' returned '0': PYTHONPATH=/home/pride/AGV/build/mission_manager/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/mission_manager/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mission_manager build --build-base /home/pride/AGV/build/mission_manager/build install --record /home/pride/AGV/build/mission_manager/install.log --single-version-externally-managed install_data --force

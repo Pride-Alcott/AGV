@@ -1,0 +1,35 @@
+[2.560s] Invoking command in '/home/pride/AGV/build/solar_panel_detector': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pride/AGV/build/solar_panel_detector/build
+[2.966s] running develop
+[3.201s] Removing /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar-panel-detector.egg-link (link to .)
+[3.386s] Invoked command in '/home/pride/AGV/build/solar_panel_detector' returned '0': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pride/AGV/build/solar_panel_detector/build
+[3.390s] Invoking command in '/home/pride/AGV/src/solar_panel_detector': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/solar_panel_detector build --build-base /home/pride/AGV/build/solar_panel_detector/build install --record /home/pride/AGV/build/solar_panel_detector/install.log --single-version-externally-managed install_data --force
+[3.735s] running egg_info
+[3.737s] writing ../../build/solar_panel_detector/solar_panel_detector.egg-info/PKG-INFO
+[3.737s] writing dependency_links to ../../build/solar_panel_detector/solar_panel_detector.egg-info/dependency_links.txt
+[3.737s] writing entry points to ../../build/solar_panel_detector/solar_panel_detector.egg-info/entry_points.txt
+[3.738s] writing requirements to ../../build/solar_panel_detector/solar_panel_detector.egg-info/requires.txt
+[3.738s] writing top-level names to ../../build/solar_panel_detector/solar_panel_detector.egg-info/top_level.txt
+[3.743s] reading manifest file '../../build/solar_panel_detector/solar_panel_detector.egg-info/SOURCES.txt'
+[3.744s] writing manifest file '../../build/solar_panel_detector/solar_panel_detector.egg-info/SOURCES.txt'
+[3.744s] running build
+[3.744s] running build_py
+[3.744s] running install
+[3.745s] running install_lib
+[3.746s] copying /home/pride/AGV/build/solar_panel_detector/build/lib/solar_panel_detector/__init__.py -> /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector
+[3.747s] copying /home/pride/AGV/build/solar_panel_detector/build/lib/solar_panel_detector/detector.py -> /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector
+[3.749s] byte-compiling /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector/__init__.py to __init__.cpython-310.pyc
+[3.751s] byte-compiling /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector/detector.py to detector.cpython-310.pyc
+[3.751s]   File "/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector/detector.py", line 18
+[3.753s]     self.declare_parameter('model_path', '\\wsl.localhost\Ubuntu-22.04\home\pride\AGV\src\solar_panel_detector\yolov8m.pt')  # <-- Update this path
+[3.753s]                                                                                                                           ^
+[3.753s] SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 15-17: truncated \UXXXXXXXX escape
+[3.753s] 
+[3.753s] running install_data
+[3.753s] copying resource/solar_panel_detector -> /home/pride/AGV/install/solar_panel_detector/share/ament_index/resource_index/packages
+[3.762s] copying package.xml -> /home/pride/AGV/install/solar_panel_detector/share/solar_panel_detector
+[3.763s] running install_egg_info
+[3.765s] Copying ../../build/solar_panel_detector/solar_panel_detector.egg-info to /home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector-0.0.0-py3.10.egg-info
+[3.776s] running install_scripts
+[3.820s] Installing detector script to /home/pride/AGV/install/solar_panel_detector/lib/solar_panel_detector
+[3.821s] writing list of installed files to '/home/pride/AGV/build/solar_panel_detector/install.log'
+[3.959s] Invoked command in '/home/pride/AGV/src/solar_panel_detector' returned '0': PYTHONPATH=/home/pride/AGV/build/solar_panel_detector/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/solar_panel_detector build --build-base /home/pride/AGV/build/solar_panel_detector/build install --record /home/pride/AGV/build/solar_panel_detector/install.log --single-version-externally-managed install_data --force

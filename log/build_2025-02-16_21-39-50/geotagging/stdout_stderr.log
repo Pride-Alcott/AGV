@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/geotagging/geotagging.egg-info/PKG-INFO
+writing dependency_links to ../../build/geotagging/geotagging.egg-info/dependency_links.txt
+writing entry points to ../../build/geotagging/geotagging.egg-info/entry_points.txt
+writing requirements to ../../build/geotagging/geotagging.egg-info/requires.txt
+writing top-level names to ../../build/geotagging/geotagging.egg-info/top_level.txt
+reading manifest file '../../build/geotagging/geotagging.egg-info/SOURCES.txt'
+writing manifest file '../../build/geotagging/geotagging.egg-info/SOURCES.txt'
+running build
+running build_py
+copying geotagging/__init__.py -> /home/pride/AGV/build/geotagging/build/lib/geotagging
+copying geotagging/geotag.py -> /home/pride/AGV/build/geotagging/build/lib/geotagging
+running install
+running install_lib
+copying /home/pride/AGV/build/geotagging/build/lib/geotagging/__init__.py -> /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging
+copying /home/pride/AGV/build/geotagging/build/lib/geotagging/geotag.py -> /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging
+byte-compiling /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging/geotag.py to geotag.cpython-310.pyc
+running install_data
+copying resource/geotagging -> /home/pride/AGV/install/geotagging/share/ament_index/resource_index/packages
+copying package.xml -> /home/pride/AGV/install/geotagging/share/geotagging
+running install_egg_info
+removing '/home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/geotagging/geotagging.egg-info to /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging-0.0.0-py3.10.egg-info
+running install_scripts
+Installing geotag script to /home/pride/AGV/install/geotagging/lib/geotagging
+writing list of installed files to '/home/pride/AGV/build/geotagging/install.log'

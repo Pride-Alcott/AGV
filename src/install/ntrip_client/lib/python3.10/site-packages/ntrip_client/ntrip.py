@@ -8,6 +8,7 @@ import time
 
 # Import pymavlink for MAVLink messaging
 from pymavlink import mavutil
+from std_msgs.msg import Bool
 
 class NTRIPCorrectionNode(Node):
     def __init__(self):
@@ -23,7 +24,11 @@ class NTRIPCorrectionNode(Node):
         
         # Declare Pixhawk (MAVLink) output parameters
         self.declare_parameter('pixhawk_port', '/dev/ttyUSB0')
-        self.declare_parameter('pixhawk_baud', 115200)
+        self.declare_parameter('pixhawk_baud', 57600)
+        
+        # Declare mission trigger topic (to start/stop NTRIP corrections)
+        self.declare_parameter('mission_start_topic', '/mission_start')
+        mission_start_topic = self.get_parameter('mission_start_topic').get_parameter_value().string_value
 
         # Read parameters
         self.caster_host = self.get_parameter('caster_host').get_parameter_value().string_value
@@ -35,7 +40,11 @@ class NTRIPCorrectionNode(Node):
         self.pixhawk_port = self.get_parameter('pixhawk_port').get_parameter_value().string_value
         self.pixhawk_baud = self.get_parameter('pixhawk_baud').get_parameter_value().integer_value
 
-        # Initialize MAVLink connection to Pixhawk
+        # Subscribe to mission start trigger.
+        self.mission_start_sub = self.create_subscription(Bool, mission_start_topic, self.mission_callback, 10)
+        self.mission_active = False
+
+        # Initialize MAVLink connection to Pixhawk.
         try:
             self.get_logger().info(f"Connecting to Pixhawk on {self.pixhawk_port} at {self.pixhawk_baud} baud...")
             self.pixhawk_conn = mavutil.mavlink_connection(self.pixhawk_port, baud=self.pixhawk_baud)
@@ -44,21 +53,28 @@ class NTRIPCorrectionNode(Node):
             self.get_logger().error(f"Failed to connect to Pixhawk: {e}")
             self.pixhawk_conn = None
 
-        # Start a thread to connect to the NTRIP caster and forward corrections
+        # Start a thread for the NTRIP connection; it will run when mission_active is True.
         self.thread = threading.Thread(target=self.connect_and_publish)
         self.thread.daemon = True
         self.thread.start()
 
+    def mission_callback(self, msg: Bool):
+        if msg.data:
+            self.get_logger().info("Mission start signal received. Activating NTRIP client.")
+            self.mission_active = True
+        else:
+            self.get_logger().info("Mission end signal received. Deactivating NTRIP client.")
+            self.mission_active = False
+
     def send_mavlink_rtcm(self, data_chunk: bytes):
         """
-        Splits the data chunk into segments of at most 200 bytes,
-        packs them into GPS_RTCM_DATA MAVLink messages, and sends them.
+        Splits data_chunk into segments (max 200 bytes), packs them into GPS_RTCM_DATA MAVLink messages, and sends them.
         """
-        chunk_size = 200
+        chunk_size = 280
         for i in range(0, len(data_chunk), chunk_size):
             segment = data_chunk[i:i+chunk_size]
             segment_length = len(segment)
-            # Pad the segment to 200 bytes if necessary
+            #mavlink2 ,aximum packet size lenth is 280 bytes
             if segment_length < chunk_size:
                 segment_padded = segment + b'\x00' * (chunk_size - segment_length)
             else:
@@ -77,10 +93,13 @@ class NTRIPCorrectionNode(Node):
 
     def connect_and_publish(self):
         """
-        Connects to the NTRIP caster and continuously reads RTCM data.
-        Each received block is forwarded as MAVLink messages.
+        Continuously attempts to connect to the NTRIP caster. When connected and mission_active is True,
+        it reads RTCM data and forwards it via MAVLink.
         """
         while rclpy.ok():
+            if not self.mission_active:
+                time.sleep(1)
+                continue
             try:
                 self.get_logger().info(f"Connecting to NTRIP caster at {self.caster_host}:{self.caster_port}")
                 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -101,7 +120,7 @@ class NTRIPCorrectionNode(Node):
                     continue
 
                 self.get_logger().info("Connected to NTRIP caster; receiving RTCM data...")
-                while rclpy.ok():
+                while rclpy.ok() and self.mission_active:
                     data = s.recv(4096)
                     if not data:
                         self.get_logger().warn("No data received, connection lost.")
@@ -110,8 +129,9 @@ class NTRIPCorrectionNode(Node):
                         self.send_mavlink_rtcm(data)
                     else:
                         self.get_logger().error("Pixhawk connection unavailable; cannot forward MAVLink messages.")
+                s.close()
             except Exception as e:
-                self.get_logger().error(f"Exception in connection: {e}")
+                self.get_logger().error(f"Exception in NTRIP connection: {e}")
             time.sleep(self.retry_interval)
 
 def main(args=None):
@@ -127,3 +147,5 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+

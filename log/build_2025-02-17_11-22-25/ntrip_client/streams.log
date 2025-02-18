@@ -1,0 +1,17 @@
+[2.239s] Invoking command in '/home/pride/AGV/build/ntrip_client': PYTHONPATH=/home/pride/AGV/build/ntrip_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/ntrip_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/ntrip_client/build --no-deps symlink_data
+[2.606s] running develop
+[2.829s] running egg_info
+[2.829s] writing ntrip_client.egg-info/PKG-INFO
+[2.829s] writing dependency_links to ntrip_client.egg-info/dependency_links.txt
+[2.829s] writing entry points to ntrip_client.egg-info/entry_points.txt
+[2.829s] writing requirements to ntrip_client.egg-info/requires.txt
+[2.829s] writing top-level names to ntrip_client.egg-info/top_level.txt
+[2.832s] reading manifest file 'ntrip_client.egg-info/SOURCES.txt'
+[2.833s] writing manifest file 'ntrip_client.egg-info/SOURCES.txt'
+[2.836s] running build_ext
+[2.840s] Creating /home/pride/AGV/install/ntrip_client/lib/python3.10/site-packages/ntrip-client.egg-link (link to .)
+[2.840s] Installing ntrip script to /home/pride/AGV/install/ntrip_client/lib/ntrip_client
+[2.840s] 
+[2.840s] Installed /home/pride/AGV/build/ntrip_client
+[2.840s] running symlink_data
+[3.006s] Invoked command in '/home/pride/AGV/build/ntrip_client' returned '0': PYTHONPATH=/home/pride/AGV/build/ntrip_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/ntrip_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/ntrip_client/build --no-deps symlink_data

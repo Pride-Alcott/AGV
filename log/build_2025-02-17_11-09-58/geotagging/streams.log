@@ -1,0 +1,19 @@
+[2.423s] Invoking command in '/home/pride/AGV/build/geotagging': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/geotagging/build --no-deps symlink_data --force
+[2.784s] running develop
+[2.992s] running egg_info
+[2.995s] writing geotagging.egg-info/PKG-INFO
+[2.996s] writing dependency_links to geotagging.egg-info/dependency_links.txt
+[2.997s] writing entry points to geotagging.egg-info/entry_points.txt
+[2.998s] writing requirements to geotagging.egg-info/requires.txt
+[2.999s] writing top-level names to geotagging.egg-info/top_level.txt
+[3.005s] reading manifest file 'geotagging.egg-info/SOURCES.txt'
+[3.008s] writing manifest file 'geotagging.egg-info/SOURCES.txt'
+[3.010s] running build_ext
+[3.010s] Creating /home/pride/AGV/install/geotagging/lib/python3.10/site-packages/geotagging.egg-link (link to .)
+[3.011s] Installing geotag script to /home/pride/AGV/install/geotagging/lib/geotagging
+[3.011s] 
+[3.011s] Installed /home/pride/AGV/build/geotagging
+[3.012s] running symlink_data
+[3.013s] symbolically linking /home/pride/AGV/build/geotagging/resource/geotagging -> /home/pride/AGV/install/geotagging/share/ament_index/resource_index/packages
+[3.013s] symbolically linking /home/pride/AGV/build/geotagging/package.xml -> /home/pride/AGV/install/geotagging/share/geotagging
+[3.183s] Invoked command in '/home/pride/AGV/build/geotagging' returned '0': PYTHONPATH=/home/pride/AGV/build/geotagging/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pride/AGV/install/geotagging/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pride/AGV/build/geotagging/build --no-deps symlink_data --force
