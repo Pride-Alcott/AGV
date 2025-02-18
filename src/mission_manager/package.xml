@@ -3,11 +3,24 @@
 
 <package format="3">
   <name>mission_manager</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>Mission manager for autonomous UAV control using MAVROS and ROS2.</description>
   <maintainer email="s229701698@mandela.ac.za">Pride-Alcott</maintainer>
-  <author email="s229701698@mandela.ac.za.">Pride-Alcott</author>
+  <author email="s229701698@mandela.ac.za">Pride-Alcott</author>
   <license>Apache-2.0</license>
+
+  <!-- Build dependencies -->
+  <build_depend>ament_cmake</build_depend>
+  <build_depend>ament_cmake_python</build_depend>
+  <build_depend>ament_index_python</build_depend>
+  <build_depend>ament_package</build_depend>
+  <build_depend>rclpy</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>mavros_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>mavros</build_depend>
+  <build_depend>rosidl_default_generators</build_depend>
 
   <!-- Test dependencies -->
   <test_depend>ament_copyright</test_depend>
@@ -25,6 +38,9 @@
   <exec_depend>mavros_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>mavros</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>ros2cli</exec_depend>
 
   <!-- Export configuration for build system -->
   <export>
