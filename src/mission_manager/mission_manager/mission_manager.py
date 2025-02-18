@@ -24,7 +24,7 @@ class MissionManager(Node):
         self.declare_parameter('heading_topic', '/mavros/global_position/compass_hdg')
         self.declare_parameter('mission_start_topic', '/mission/start')
         self.declare_parameter('mission_end_topic', '/mission/end')
-        self.declare_parameter('manual_control_channel', 5)
+        self.declare_parameter('manual_control_channel', 5) # might need to change depending on my rc input for arming.
         self.declare_parameter('manual_control_threshold', 1500) # the limit to which the system operates under manual mode, input below this means manual intervention is required
         self.declare_parameter('auto_control_threshold', 1400) #the input conditions exceeds this threshols, the system autonomously manages without manual control
 
