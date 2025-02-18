@@ -87,7 +87,7 @@ class MissionManager(Node):
             self.get_logger().info("Automated control re-enabled by RC.")
             self.manual_control_enabled = False
             if self.mission_active:
-                # Logic to safely re-engage automated control can be added here.
+                
                 pass
 
     def mission_start_callback(self, msg: Bool):
@@ -148,6 +148,7 @@ class MissionManager(Node):
             self.get_logger().warn("Arming service not available.")
 
 def main(args=None):
+    print("The mission managr node has been started")
     rclpy.init(args=args)
     node = MissionManager()
     rclpy.spin(node)
