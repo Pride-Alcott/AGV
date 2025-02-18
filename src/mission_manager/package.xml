@@ -5,8 +5,8 @@
   <name>mission_manager</name>
   <version>0.0.1</version>
   <description>Mission manager for autonomous UAV control using MAVROS and ROS2.</description>
-  <maintainer email="your_email@example.com">Your Name</maintainer>
-  <author email="your_email@example.com">Your Name</author>
+  <maintainer email="s229701698@mandela.ac.za">Pride-Alcott</maintainer>
+  <author email="s229701698@mandela.ac.za.">Pride-Alcott</author>
   <license>Apache-2.0</license>
 
   <!-- Test dependencies -->
