@@ -25,8 +25,8 @@ class MissionManager(Node):
         self.declare_parameter('mission_start_topic', '/mission/start')
         self.declare_parameter('mission_end_topic', '/mission/end')
         self.declare_parameter('manual_control_channel', 5)
-        self.declare_parameter('manual_control_threshold', 1500)
-        self.declare_parameter('auto_control_threshold', 1400)
+        self.declare_parameter('manual_control_threshold', 1500) # the limit to which the system operates under manual mode, input below this means manual intervention is required
+        self.declare_parameter('auto_control_threshold', 1400) #the input conditions exceeds this threshols, the system autonomously manages without manual control
 
         # Retrieve parameters
         self.state_topic = self.get_parameter('state_topic').get_parameter_value().string_value
