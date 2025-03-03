@@ -17,7 +17,7 @@ class SolarPanelDetector(Node):
         self.declare_parameter('image_topic', '/camera/image_raw')
         self.declare_parameter('trigger_topic', '/detection_trigger')
         self.declare_parameter('detection_topic', '/detections')
-        self.declare_parameter('model_path', '/home/pride/AGV/src/solar_panel_detector/yolov8m.pt')
+        self.declare_parameter('model_path', '/home/pride/AGV/src/solar_panel_detector/yolov8m.pt') # change to where the model is.
 
         image_topic = self.get_parameter('image_topic').get_parameter_value().string_value
         trigger_topic = self.get_parameter('trigger_topic').get_parameter_value().string_value
