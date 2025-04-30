@@ -19,7 +19,7 @@ class ImageCaptureNode(Node):
             self.get_logger().error("Could not open webcam.")
             return  # Exit initialization if the camera fails
 
-        self.timer = self.create_timer(0.1, self.timer_callback)
+        self.timer = self.create_timer(0.5, self.timer_callback)
 
     def timer_callback(self):
         if not self.cap.isOpened():

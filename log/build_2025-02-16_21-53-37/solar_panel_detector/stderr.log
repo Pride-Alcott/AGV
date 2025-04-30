@@ -1,5 +1,0 @@
-  File "/home/pride/AGV/install/solar_panel_detector/lib/python3.10/site-packages/solar_panel_detector/detector.py", line 18
-    self.declare_parameter('model_path', '\\wsl.localhost\Ubuntu-22.04\home\pride\AGV\src\solar_panel_detector\yolov8m.pt')  # <-- Update this path
-                                                                                                                          ^
-SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 15-17: truncated \UXXXXXXXX escape
-

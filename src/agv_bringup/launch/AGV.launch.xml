@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="solar_panel_detector" exec="detector" output="screen"/>
+    <node pkg="ntrip_client" exec="ntrip" output="screen"/>
+    <node pkg="geotagging" exec="geotag" output="screen"/>
+    <node pkg="image_capture" exec="capture" output="screen"/>
+    <node pkg="mission_manager" exec="mission_manager" output="screen"/>
+    <!-- <node pkg="mission_manager" exec="mission_control_client" output="screen"/> -->
+    <node pkg="lidar" exec="lidar" output="screen"/>
+    <!-- <node pkg="pan_tilt" exec="pan_tilt" output="screen"/> -->
+</launch>

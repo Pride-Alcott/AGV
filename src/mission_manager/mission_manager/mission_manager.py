@@ -2,8 +2,8 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSDurabilityPolicy
 import datetime
-
 
 from std_msgs.msg import String, Bool, Float64
 from sensor_msgs.msg import NavSatFix
@@ -16,6 +16,13 @@ from mavros_msgs.srv import SetMode, CommandBool
 class MissionManager(Node):
     def __init__(self):
         super().__init__('mission_manager')
+
+        # QoS Profile for MAVROS topics (Best-Effort)
+        self.mavros_qos = QoSProfile(
+            reliability=QoSReliabilityPolicy.BEST_EFFORT,
+            durability=QoSDurabilityPolicy.VOLATILE,
+            depth=10
+        )
 
         # Parameters
         self.declare_parameter('state_topic', '/mavros/state')
@@ -36,12 +43,15 @@ class MissionManager(Node):
         # Subscribers
         self.state_sub = self.create_subscription(State, self.state_topic, self.state_callback, 10)
         self.waypoint_sub = self.create_subscription(WaypointReached, self.waypoint_topic, self.waypoint_callback, 10)
-        self.navsat_sub = self.create_subscription(NavSatFix, self.navsat_topic, self.navsat_callback, 10)
-        self.heading_sub = self.create_subscription(Float64, self.heading_topic, self.heading_callback, 10)
+        
+        # Use MAVROS QoS for sensor topics
+        self.navsat_sub = self.create_subscription(NavSatFix, self.navsat_topic, self.navsat_callback, qos_profile=self.mavros_qos)
+        self.heading_sub = self.create_subscription(Float64, self.heading_topic, self.heading_callback, qos_profile=self.mavros_qos)
+        
         self.mission_start_sub = self.create_subscription(Bool, self.mission_start_topic, self.mission_start_callback, 10)
         self.mission_end_sub = self.create_subscription(Bool, self.mission_end_topic, self.mission_end_callback, 10)
 
-        # Publisher for trigger messages (for the solar panel detector)
+        # Publisher for trigger messages
         self.trigger_pub = self.create_publisher(Bool, '/detection_trigger', 10)
 
         # Service clients
@@ -72,7 +82,6 @@ class MissionManager(Node):
 
     def waypoint_callback(self, msg: WaypointReached):
         self.get_logger().info(f"Waypoint {msg.wp_seq} reached.")
-        # Publish a trigger to run solar panel detection at this waypoint.
         trigger_msg = Bool()
         trigger_msg.data = True
         self.trigger_pub.publish(trigger_msg)

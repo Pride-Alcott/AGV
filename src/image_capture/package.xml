@@ -4,13 +4,14 @@
   <name>image_capture</name>
   <version>0.0.0</version>
   <description>Package for capturing images and publishing them as ROS2 messages</description>
-  <maintainer email="pride@todo.todo">pride</maintainer>
-  <license>TODO: License declaration</license>
+  <maintainer email="s229701698@mandela.ac.za">pride</maintainer>
+  <license>Apache-2.0</license>
 
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>cv_bridge</depend>
+  <depend>rosidl_default_runtime</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>

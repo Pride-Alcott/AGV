@@ -1,3 +1,0 @@
-[console_scripts]
-detector = solar_panel_detector.detector
-

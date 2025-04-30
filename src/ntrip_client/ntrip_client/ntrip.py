@@ -5,8 +5,6 @@ import socket
 import base64
 import threading
 import time
-
-# Import pymavlink for MAVLink messaging
 from pymavlink import mavutil
 from std_msgs.msg import Bool
 
@@ -14,37 +12,50 @@ class NTRIPCorrectionNode(Node):
     def __init__(self):
         super().__init__('ntrip_correction_node')
         
-        # Declare NTRIP parameters
-        self.declare_parameter('caster_host', 'www.rtk2go.com')
-        self.declare_parameter('caster_port', 2101)
-        self.declare_parameter('mountpoint', 'Renewables')
-        self.declare_parameter('username', 's229701698-at-mandela.ac.za')
-        self.declare_parameter('password', 'mukandagumbo')
-        self.declare_parameter('retry_interval', 5)  # seconds
+        # Declare and retrieve parameters
+        self.declare_parameters(
+            namespace='',
+            parameters=[
+                ('caster_host', 'www.rtk2go.com'),
+                ('caster_port', 2101),
+                ('mountpoint', 'Renewables'),
+                ('username', 's229701698-at-mandela.ac.za'),
+                ('password', 'mukandagumbo'),
+                ('retry_interval', 5),
+                ('pixhawk_port', '/dev/ttyUSB0'),
+                ('pixhawk_baud', 57600),
+                ('mission_start_topic', '/mission_start')
+            ]
+        )
         
-        # Declare Pixhawk (MAVLink) output parameters
-        self.declare_parameter('pixhawk_port', '/dev/ttyUSB0')
-        self.declare_parameter('pixhawk_baud', 57600)
-        
-        # Declare mission trigger topic (to start/stop NTRIP corrections)
-        self.declare_parameter('mission_start_topic', '/mission_start')
-        mission_start_topic = self.get_parameter('mission_start_topic').get_parameter_value().string_value
+        self.caster_host = self.get_parameter('caster_host').value
+        self.caster_port = self.get_parameter('caster_port').value
+        self.mountpoint = self.get_parameter('mountpoint').value
+        self.username = self.get_parameter('username').value
+        self.password = self.get_parameter('password').value
+        self.retry_interval = self.get_parameter('retry_interval').value
+        self.pixhawk_port = self.get_parameter('pixhawk_port').value
+        self.pixhawk_baud = self.get_parameter('pixhawk_baud').value
+        mission_start_topic = self.get_parameter('mission_start_topic').value
 
-        # Read parameters
-        self.caster_host = self.get_parameter('caster_host').get_parameter_value().string_value
-        self.caster_port = self.get_parameter('caster_port').get_parameter_value().integer_value
-        self.mountpoint = self.get_parameter('mountpoint').get_parameter_value().string_value
-        self.username = self.get_parameter('username').get_parameter_value().string_value
-        self.password = self.get_parameter('password').get_parameter_value().string_value
-        self.retry_interval = self.get_parameter('retry_interval').get_parameter_value().integer_value
-        self.pixhawk_port = self.get_parameter('pixhawk_port').get_parameter_value().string_value
-        self.pixhawk_baud = self.get_parameter('pixhawk_baud').get_parameter_value().integer_value
-
-        # Subscribe to mission start trigger.
+        # Subscribe to mission start trigger
         self.mission_start_sub = self.create_subscription(Bool, mission_start_topic, self.mission_callback, 10)
         self.mission_active = False
 
-        # Initialize MAVLink connection to Pixhawk.
+        # Initialize MAVLink connection to Pixhawk
+        self.pixhawk_conn = None
+        self.connect_pixhawk()
+
+        # Sequence ID for RTCM messages (5 bits: 0-31)
+        self.sequence_id = 0
+
+        # Start the NTRIP thread
+        self.thread = threading.Thread(target=self.connect_and_publish)
+        self.thread.daemon = True
+        self.thread.start()
+
+    def connect_pixhawk(self):
+        """Attempt to connect to Pixhawk via MAVLink."""
         try:
             self.get_logger().info(f"Connecting to Pixhawk on {self.pixhawk_port} at {self.pixhawk_baud} baud...")
             self.pixhawk_conn = mavutil.mavlink_connection(self.pixhawk_port, baud=self.pixhawk_baud)
@@ -53,86 +64,86 @@ class NTRIPCorrectionNode(Node):
             self.get_logger().error(f"Failed to connect to Pixhawk: {e}")
             self.pixhawk_conn = None
 
-        # Start a thread for the NTRIP connection; it will run when mission_active is True.
-        self.thread = threading.Thread(target=self.connect_and_publish)
-        self.thread.daemon = True
-        self.thread.start()
-
     def mission_callback(self, msg: Bool):
-        if msg.data:
-            self.get_logger().info("Mission start signal received. Activating NTRIP client.")
-            self.mission_active = True
-        else:
-            self.get_logger().info("Mission end signal received. Deactivating NTRIP client.")
-            self.mission_active = False
+        """Toggle NTRIP client based on mission start/stop signals."""
+        self.mission_active = msg.data
+        status = "active" if self.mission_active else "inactive"
+        self.get_logger().info(f"NTRIP client is now {status}.")
 
     def send_mavlink_rtcm(self, data_chunk: bytes):
-        """
-        Splits data_chunk into segments (max 200 bytes), packs them into GPS_RTCM_DATA MAVLink messages, and sends them.
-        """
-        chunk_size = 280
-        for i in range(0, len(data_chunk), chunk_size):
-            segment = data_chunk[i:i+chunk_size]
-            segment_length = len(segment)
-            #mavlink2 ,aximum packet size lenth is 280 bytes
-            if segment_length < chunk_size:
-                segment_padded = segment + b'\x00' * (chunk_size - segment_length)
-            else:
-                segment_padded = segment
-            segment_list = list(segment_padded)
+        """Send RTCM data via MAVLink GPS_RTCM_DATA messages with fragmentation handling."""
+        if not self.pixhawk_conn:
+            self.get_logger().error("Pixhawk connection not available.")
+            return
+
+        # Use 180 bytes per fragment (as per MAVLink RTCM specification)
+        chunk_size = 180
+        parts = [data_chunk[i:i+chunk_size] for i in range(0, len(data_chunk), chunk_size)]
+        num_parts = len(parts)
+        self.sequence_id = (self.sequence_id + 1) % 32  # 5-bit sequence ID
+
+        for fragment_id, part in enumerate(parts):
+            # If more than one part, mark as fragmented (bit0 = 1)
+            fragmented = 1 if num_parts > 1 else 0
+            # Fragment ID (2 bits: 0-3)
+            fragment_id_bits = fragment_id % 4
+            # Combine flags: bit0: fragmentation flag, bits1-2: fragment ID, bits3-7: sequence ID
+            flags = fragmented | (fragment_id_bits << 1) | (self.sequence_id << 3)
+            part_len = len(part)
+            part_padded = part.ljust(chunk_size, b'\x00')  # pad to exactly 180 bytes
+
             try:
                 msg = self.pixhawk_conn.mav.gps_rtcm_data_encode(
-                    flags=0,
-                    len=segment_length,
-                    data=segment_list
+                    flags=flags,
+                    len=part_len,
+                    data=list(part_padded)
                 )
                 self.pixhawk_conn.mav.send(msg)
-                self.get_logger().debug(f"Sent MAVLink RTCM message with {segment_length} bytes.")
+                self.get_logger().debug(f"Sent RTCM part {fragment_id+1}/{num_parts} (seq: {self.sequence_id})")
             except Exception as e:
-                self.get_logger().error(f"Failed to send MAVLink RTCM message: {e}")
+                self.get_logger().error(f"Failed to send RTCM data: {e}")
 
     def connect_and_publish(self):
-        """
-        Continuously attempts to connect to the NTRIP caster. When connected and mission_active is True,
-        it reads RTCM data and forwards it via MAVLink.
-        """
+        """Manage NTRIP connection and stream data to Pixhawk."""
         while rclpy.ok():
             if not self.mission_active:
                 time.sleep(1)
                 continue
-            try:
-                self.get_logger().info(f"Connecting to NTRIP caster at {self.caster_host}:{self.caster_port}")
-                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                s.connect((self.caster_host, self.caster_port))
-                
-                credentials = f"{self.username}:{self.password}"
-                base64_credentials = base64.b64encode(credentials.encode('utf-8')).decode('utf-8')
-                request = (f"GET /{self.mountpoint} HTTP/1.0\r\n"
-                           f"User-Agent: NTRIP ROS2 Client\r\n"
-                           f"Authorization: Basic {base64_credentials}\r\n\r\n")
-                s.sendall(request.encode('utf-8'))
-                
-                response = s.recv(1024)
-                if b"200 OK" not in response:
-                    self.get_logger().error("Did not receive 200 OK from NTRIP caster")
-                    s.close()
-                    time.sleep(self.retry_interval)
-                    continue
 
-                self.get_logger().info("Connected to NTRIP caster; receiving RTCM data...")
-                while rclpy.ok() and self.mission_active:
-                    data = s.recv(4096)
-                    if not data:
-                        self.get_logger().warn("No data received, connection lost.")
-                        break
-                    if self.pixhawk_conn is not None:
-                        self.send_mavlink_rtcm(data)
-                    else:
-                        self.get_logger().error("Pixhawk connection unavailable; cannot forward MAVLink messages.")
-                s.close()
+            try:
+                self.get_logger().info(f"Connecting to NTRIP caster: {self.caster_host}:{self.caster_port}")
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    s.settimeout(1.0)  # Allow periodic mission_active check
+                    s.connect((self.caster_host, self.caster_port))
+                    
+                    # Build and send the NTRIP request
+                    credentials = base64.b64encode(f"{self.username}:{self.password}".encode()).decode()
+                    request = (
+                        f"GET /{self.mountpoint} HTTP/1.0\r\n"
+                        f"User-Agent: ROS2 NTRIP Client\r\n"
+                        f"Authorization: Basic {credentials}\r\n\r\n"
+                    )
+                    s.sendall(request.encode())
+
+                    # Check the caster's response
+                    response = s.recv(1024)
+                    if b"200 OK" not in response:
+                        self.get_logger().error(f"NTRIP caster response: {response.decode().strip()}")
+                        continue
+
+                    self.get_logger().info("Connected to NTRIP caster. Streaming RTCM data...")
+                    while rclpy.ok() and self.mission_active:
+                        try:
+                            data = s.recv(4096)
+                            if not data:
+                                self.get_logger().warning("NTRIP connection closed by server.")
+                                break
+                            self.send_mavlink_rtcm(data)
+                        except socket.timeout:
+                            continue  # check mission_active status again
             except Exception as e:
-                self.get_logger().error(f"Exception in NTRIP connection: {e}")
-            time.sleep(self.retry_interval)
+                self.get_logger().error(f"NTRIP connection error: {e}")
+                time.sleep(self.retry_interval)
 
 def main(args=None):
     rclpy.init(args=args)
@@ -140,12 +151,10 @@ def main(args=None):
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        pass
+        node.get_logger().info("Shutting down...")
     finally:
         node.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
-
-
