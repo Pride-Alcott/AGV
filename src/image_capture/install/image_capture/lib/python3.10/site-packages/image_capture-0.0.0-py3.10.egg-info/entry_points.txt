@@ -1,3 +1,0 @@
-[console_scripts]
-capture = image_capture.capture:main
-
