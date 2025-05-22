@@ -1,3 +1,0 @@
-[console_scripts]
-pan_tilt = pan_tilt.pan_tilt:main
-
