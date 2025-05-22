@@ -21,7 +21,6 @@
         <param name="auto_exposure" value="true"/>
         <param name="brightness" value="0.6"/>
         <param name="contrast" value="0.6"/>
-        <remap from="/camera/image_raw" to="/camera0/image_raw"/>
     </node>
 
     <!-- Solar Panel Detection Node -->
