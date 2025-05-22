@@ -23,8 +23,8 @@ class SolarPanelDetector(Node):
         self.declare_parameter('trigger_topic', '/detection_trigger')
         self.declare_parameter('detection_topic', '/detections')
         self.declare_parameter('angles_topic', '/gimbal_angles')
-        self.declare_parameter('model_path', '/Solar-farm-AGV/src/best.pt')  # YOLOv8
-        self.declare_parameter('output_folder', '/AGV/output')
+        self.declare_parameter('model_path', './src/best.pt')  # YOLOv8
+        self.declare_parameter('output_folder', os.path.expanduser('~/AGV/output'))
         self.declare_parameter('serial_port', '/dev/arduino')  #from the udev rule
         self.declare_parameter('baud_rate', 9600)
         self.declare_parameter('confidence_threshold', 0.5)

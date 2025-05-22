@@ -10,7 +10,7 @@
     <arg name="data_dir" default="/home/pride/AGV/data"/>
     <arg name="continuous_geotagging" default="false"/>
     <arg name="geotag_interval" default="1.0"/>
-    <arg name="model_path" default="/AGV/src/best.pt" description="Path to YOLO model"/>
+    <arg name="model_path" default="./src/best.pt" description="Path to YOLO model"/>
 
     <!-- Camera Node -->
     <node pkg="image_capture" exec="capture" name="camera_node" output="screen">
