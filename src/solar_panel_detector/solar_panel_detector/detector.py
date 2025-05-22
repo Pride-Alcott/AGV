@@ -28,9 +28,9 @@ class SolarPanelDetector(Node):
         self.declare_parameter('serial_port', '/dev/arduino')  #from the udev rule
         self.declare_parameter('baud_rate', 9600)
         self.declare_parameter('confidence_threshold', 0.5)
-        self.declare_parameter('image_size', 640)  # Configurable for Pi performance
+        self.declare_parameter('image_size', 640) 
         self.declare_parameter('save_images', True)
-        self.declare_parameter('max_detections', 5)  # Limit processing
+        self.declare_parameter('max_detections', 5) 
 
         # Get parameters
         img_topic = self.get_parameter('image_topic').get_parameter_value().string_value
@@ -57,7 +57,7 @@ class SolarPanelDetector(Node):
         self.angle_pub = self.create_publisher(Point, ang_topic, 10)
         
         # Reduce timer frequency to save CPU
-        self.create_timer(0.2, self.read_angles)  # 5 Hz instead of 10 Hz
+        self.create_timer(0.2, self.read_angles)  
 
         # Thread safety
         self.serial_lock = Lock()
