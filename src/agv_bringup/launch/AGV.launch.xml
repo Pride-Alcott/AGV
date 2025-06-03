@@ -2,8 +2,8 @@
 <launch>
     <!-- Launch arguments -->
     <arg name="camera_device" default="/dev/video0"/>
-    <arg name="arduino_port" default="/dev/ttyUSB0"/>
-    <arg name="pixhawk_port" default="/dev/ttyACM0"/>
+    <arg name="arduino_port" default="/dev/arduino"/>
+    <arg name="pixhawk_port" default="/dev/pixhawk"/>
     <arg name="camera_fps" default="2.0"/>
     <arg name="detection_confidence" default="0.6"/>
     <arg name="yolo_image_size" default="416"/>
