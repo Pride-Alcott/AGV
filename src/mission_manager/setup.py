@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='pride',
-    maintainer_email='pride@mandela.ac.za',
+    maintainer_email='s229701698@mandela.ac.za',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
