@@ -19,8 +19,6 @@
         <param name="width" value="640"/>
         <param name="height" value="480"/>
         <param name="auto_exposure" value="true"/>
-        <param name="brightness" value="0.6"/>
-        <param name="contrast" value="0.6"/>
     </node>
 
     <!-- Solar Panel Detection Node -->
@@ -75,8 +73,6 @@
         
         <!-- Additional features -->
         <param name="backup_to_json" value="true"/>
-        <param name="create_thumbnails" value="true"/>
-        <param name="thumbnail_size" value="150"/>
     </node>
 
     <!-- Mission Manager Node -->
