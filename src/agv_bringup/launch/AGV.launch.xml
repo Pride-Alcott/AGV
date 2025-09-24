@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <launch>
     <!-- Launch arguments -->
-    <arg name="camera_device" default="/dev/video0"/>
+    <arg name="camera_device" default="/dev/camera"/>
     <arg name="arduino_port" default="/dev/arduino"/>
+    <arg name="output_folder" default="/home/AGV_CC/AGV/detections"/>
     <arg name="pixhawk_port" default="/dev/pixhawk"/>
     <arg name="camera_fps" default="2.0"/>
     <arg name="detection_confidence" default="0.6"/>
@@ -10,7 +11,7 @@
     <arg name="data_dir" default="/home/pride/AGV/data"/>
     <arg name="continuous_geotagging" default="false"/>
     <arg name="geotag_interval" default="1.0"/>
-    <arg name="model_path" default="/AGV/src/best.pt" description="Path to YOLO model"/>
+    <arg name="model_path" default="/home/AGV_CC/AGV/src/best.pt" description="Path to YOLO model"/>
 
     <!-- Camera Node -->
     <node pkg="image_capture" exec="capture" name="camera_node" output="screen">
@@ -23,7 +24,7 @@
 
     <!-- Solar Panel Detection Node -->
     <node pkg="solar_panel_detector" exec="detector" name="solar_detector" output="screen">
-        <param name="image_topic" value="/camera0/image_raw"/>
+        <param name="image_topic" value="/camera/image_raw"/>
         <param name="serial_port" value="$(var arduino_port)"/>
         <param name="model_path" value="$(var model_path)"/>
         <param name="confidence_threshold" value="$(var detection_confidence)"/>
@@ -50,10 +51,6 @@
         <param name="heading_topic" value="/mavros/global_position/compass_hdg"/>
         <param name="gps_position_topic" value="/gps_position"/>
         
-        <!-- Trigger topics -->
-        <param name="detection_trigger_topic" value="/detection_trigger"/>
-        <param name="mission_start_topic" value="/mission_start"/>
-        
         <!-- File paths -->
         <param name="output_base_dir" value="$(var data_dir)/geotagged_images"/>
         <param name="excel_file" value="geotag_data.xlsx"/>
@@ -64,13 +61,6 @@
         <param name="capture_interval" value="$(var geotag_interval)"/>
         <param name="max_images_per_session" value="2000"/>
         <param name="image_quality" value="90"/>
-        <param name="compress_images" value="true"/>
-        
-        <!-- GPS settings -->
-        <param name="gps_timeout" value="15.0"/>
-        <param name="min_gps_accuracy" value="5.0"/>
-        <param name="waypoint_radius" value="3.0"/>
-        
         <!-- Additional features -->
         <param name="backup_to_json" value="true"/>
     </node>
